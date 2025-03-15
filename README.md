@@ -11,8 +11,11 @@ Autoencoder (Deep Learning-based Anomaly Detection)
 📂 Project Structure
 
 ├── ai_data_quality_notebook.ipynb   # Jupyter Notebook with full implementation
+
 ├── anomaly_report.csv               # Output file with detected anomalies
+
 ├── REPORT.md                         # Detailed project report
+
 ├── README.md                         # This file
 
 🛠️ Setup Instructions
