@@ -24,13 +24,13 @@ Autoencoder (Deep Learning-based Anomaly Detection)
 
 Ensure you have Python 3.8+ installed. Then, install required packages:
 
-pip install numpy pandas matplotlib seaborn scikit-learn tensorflow imbalanced-learn
-
+**pip install numpy pandas matplotlib seaborn scikit-learn tensorflow imbalanced-learn
+**
 2️⃣ Run Jupyter Notebook
 
 Start Jupyter Notebook and open ai_data_quality_notebook.ipynb:
 
-jupyter notebook
+**jupyter notebook**
 
 Run all cells to execute data preprocessing, model training, and anomaly detection.
 
@@ -38,10 +38,10 @@ Run all cells to execute data preprocessing, model training, and anomaly detecti
 
 After running the notebook, an anomaly report will be saved as anomaly_report.csv. You can open it in Excel or view it using:
 
-import pandas as pd
+**import pandas as pd
 df = pd.read_csv("anomaly_report.csv")
 df.head()
-
+**
 🔬 Methodology
 
 Data Preprocessing: Standardization using StandardScaler.
