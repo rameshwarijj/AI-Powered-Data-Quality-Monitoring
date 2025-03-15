@@ -1,1 +1,86 @@
 
+AI-Powered Data Quality Monitoring Report
+
+1. Introduction
+
+This project detects data anomalies in simulated datasets using Machine Learning (ML) techniques. The objective is to identify inconsistencies in data pipelines and improve data quality.
+
+2. Methodology
+
+2.1 Data Generation
+
+A synthetic dataset of 1,000 normal data points and 50 anomalies was created. The dataset has three features (Feature_1, Feature_2, Feature_3).
+
+2.2 Data Preprocessing
+
+Standardization: Applied StandardScaler to normalize data.
+
+Class Imbalance Handling: Used SMOTE (Synthetic Minority Over-sampling Technique) to generate more anomaly samples.
+
+2.3 Anomaly Detection Techniques
+
+Isolation Forest
+
+Isolation Forest is an unsupervised learning algorithm that detects anomalies based on data isolation.
+
+Model trained with n_estimators=150 and contamination=0.05.
+
+Autoencoder (Deep Learning)
+
+Built an Autoencoder neural network to reconstruct normal data and detect anomalies based on reconstruction error.
+
+Architecture:
+
+Input Layer: 3 neurons
+
+Hidden Layers: 8 neurons (ReLU) → 3 neurons (ReLU) → 8 neurons (ReLU)
+
+Output Layer: 3 neurons (sigmoid activation)
+
+2.4 Evaluation Metrics
+
+We used Precision, Recall, and F1-score to evaluate anomaly detection performance.
+
+Isolation Forest Results
+Class	Precision	Recall	F1-Score	Support
+Normal (0)	0.98	0.98	0.98	1000
+Anomaly (1)	0.64	0.68	0.66	50
+Accuracy	0.97			
+
+Autoencoder Results
+Class	Precision	Recall	F1-Score	Support
+Normal (0)	0.98	0.97	0.97	1000
+Anomaly (1)	0.49	0.52	0.5	50
+Accuracy	0.95			
+
+3. Findings
+Isolation Forest performed better than Autoencoder, with higher recall and precision for anomalies.
+
+Autoencoder had higher false positives, detecting some normal data as anomalies.
+
+Visualizations confirmed the presence of detected anomalies in different feature spaces.
+
+
+4. Conclusion
+
+This project successfully implemented AI-powered anomaly detection for data pipelines. The Isolation Forest model provided better accuracy, making it a preferred choice for anomaly detection.
+
+
+5. Future Improvements
+
+Optimize hyperparameters for Autoencoder to improve anomaly detection.
+
+Apply to real-world datasets (e.g., BigQuery logs).
+
+Use ensemble methods (Isolation Forest + Autoencoder).
+
+
+
+6. References
+
+Scikit-learn Documentation
+
+TensorFlow Documentation
+
+Research Papers on Anomaly Detection
+
